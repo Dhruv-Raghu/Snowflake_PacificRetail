@@ -51,3 +51,14 @@ Similarly, [ProductAnalysisView.sql](Gold/2_ProductAnalysisView.sql) is a view t
 A lot of extra analysis can be done in the gold layer beyond simple views as showcased in this project, however the aim of this project is to facilitate the creation and management of the data warehouse and data analysis is beyond its scope.
 
 <img width="385" alt="image" src="https://github.com/user-attachments/assets/d4ab7a0a-3653-4718-8cf9-003aca243415">
+
+## Conclusion
+This image shows a high level architecture of the project.
+<img width="768" alt="image" src="https://github.com/user-attachments/assets/642588c4-3edc-47b3-837d-28241a2d43d8">
+Through this project I learnt how to:
+- Create an external stage that links Azure Data Lake Storage to Snowflake
+- Create automated tasks on Snowflake that can be scheduled to run at a certain time
+- Create streams to identify any changes made to Snowflake tables
+- Use streams to update data in other tables
+- Manage and Deploy a Multi-layer Snowflake Data Warehouse
+
