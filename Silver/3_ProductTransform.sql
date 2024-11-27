@@ -1,3 +1,5 @@
+USE pacificretail_db.silver;
+
 -- create stored PROCEDURE
 CREATE OR REPLACE PROCEDURE  merge_product_to_silver()
 RETURNS STRING
