@@ -12,7 +12,16 @@ The Bronze Layer focuses on data ingestion from from Azure Data Lake Storage to 
 
 Finally, a stream is created for each of the tables to track and save any changes made to the tables in [StreamCreation.sql](Bronze/5_StreamCreation.sql). These streams can be used to identify changes in the bronze layer tables and make updates to the corresponding tables in the Silver Layer.
 
-<img width="379" alt="Screenshot 2024-11-27 at 3 20 09 PM" src="https://github.com/user-attachments/assets/6280cd57-1783-4bd2-b5db-0b6dbbf94c18">
+<img width="379" alt="Screenshot 2024-11-27 at 3 26 33 PM" src="https://github.com/user-attachments/assets/fad3ac17-a7c2-4c0c-832d-1ccfacef2e8d">
 
 ### [Silver Layer](https://github.com/Dhruv-Raghu/Snowflake_PacificRetail/tree/main/Silver)
 The Silver Layer focuses on data cleaning and transformations. It uses the raw data from the bronze layer and transforms it to fit the needs of the company. These transformations include cleaning missing or abnormal values, data validation, and getting rid of unused or unimportant data. 
+
+#### [Customer Data Transformations](Silver/2_CustomerTransform.sql)
+| Transformation              | Details                                                         |
+| --------------------------  | ----------------------------------------------------------------|
+| Email Validation            | Ensures Email is not null                                       |
+| Customer Type               | Normalizes Customer Types to 'Regular', 'Premium' or 'Unknown'  |
+| Age Verification            | Ensures age is between 18 and 120                               |
+| Gender Standardization      | Classifies gender as 'Male', 'Female' or 'Other'                |
+| Total Purchases Validation  | Ensures total purchases is a number defaulting to 0 if invalid  |
