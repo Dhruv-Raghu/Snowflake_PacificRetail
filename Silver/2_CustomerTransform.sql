@@ -1,3 +1,5 @@
+USE pacificretail_db.silver;
+
 -- create stored procedure to clean raw customer table
 CREATE OR REPLACE PROCEDURE process_customer_changes()
 RETURNS STRING
@@ -76,18 +78,18 @@ $$;
 
 
 -- Create task to schedule when the data is to be moved from the bronze layer to the silver layer
-CREATE OR REPLACE TASK silver_customer_merge_task
+CREATE OR REPLACE TASK customer_silver_merge_task
   WAREHOUSE = compute_wh
   SCHEDULE = 'USING CRON 0 */4 * * * America/New_York'
 AS
   CALL process_customer_changes();
 
 -- start task    
-ALTER TASK silver_customer_merge_task RESUME;
+ALTER TASK customer_silver_merge_task RESUME;
 
 -- -- Check if the raw customer table is populated
 -- Select * from bronze.raw_customer
 
 -- -- Execute the task immediately instead of waiting for the scheduled time
--- EXECUTE TASK silver_customer_merge_task;
+-- EXECUTE TASK customer_silver_merge_task;
  
