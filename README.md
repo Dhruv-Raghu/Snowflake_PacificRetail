@@ -25,3 +25,16 @@ The Silver Layer focuses on data cleaning and transformations. It uses the raw d
 | Age Verification            | Ensures age is between 18 and 120                               |
 | Gender Standardization      | Classifies gender as 'Male', 'Female' or 'Other'                |
 | Total Purchases Validation  | Ensures total purchases is a number defaulting to 0 if invalid  |
+
+#### [Product Data Transformations](Silver/3_ProductTransform.sql)
+| Transformation              | Details                                                         |
+| --------------------------  | ----------------------------------------------------------------|
+| Price Validation            | Ensures Price is a postive number                               |
+| Stock Quantity Validation   | Ensures Stock quantity is non-negative                          |
+| Rating Validation           | Ensures Rating is between 0 and 5                               |
+
+#### [Orders Data Transformations](Silver/4_OrdersTransform.sql)
+| Transformation              | Details                                                         |
+| --------------------------  | ----------------------------------------------------------------|
+| Amount Validation           | Ensures Transaction Amount is greater than 0                    |
+| Transaction ID Validation   | Ensures Transaction ID is not null                              |
