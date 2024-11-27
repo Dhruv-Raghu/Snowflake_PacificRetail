@@ -38,3 +38,16 @@ The Silver Layer focuses on data cleaning and transformations. It uses the raw d
 | --------------------------  | ----------------------------------------------------------------|
 | Amount Validation           | Ensures Transaction Amount is greater than 0                    |
 | Transaction ID Validation   | Ensures Transaction ID is not null                              |
+
+<img width="381" alt="image" src="https://github.com/user-attachments/assets/cea42e2d-0e48-4138-ba8d-a1d5515b5edb">
+
+### [Gold Layer](https://github.com/Dhruv-Raghu/Snowflake_PacificRetail/tree/main/Gold)
+The Gold Layer aims at using the transformed data from the Silver Layer to create combined views or tables that can be used for analysis. For example [RegionAnalysisView.sql](Gold/1_RegionAnalysisView.sql) is a view that combines all 3 tables to analyse the sales performance of different regions and to identify the best regions in terms of sales amounts. 
+<img width="808" alt="image" src="https://github.com/user-attachments/assets/30f5bd41-7537-4db6-8314-2f528172a2b1">
+
+Similarly, [ProductAnalysisView.sql](Gold/2_ProductAnalysisView.sql) is a view that can be used to compare the sales of different product categories among different genders. 
+<img width="1028" alt="image" src="https://github.com/user-attachments/assets/91feb50f-9642-416c-8767-6835542cbd87">
+
+A lot of extra analysis can be done in the gold layer beyond simple views as showcased in this project, however the aim of this project is to facilitate the creation and management of the data warehouse and data analysis is beyond its scope.
+
+<img width="385" alt="image" src="https://github.com/user-attachments/assets/d4ab7a0a-3653-4718-8cf9-003aca243415">
