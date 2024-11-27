@@ -54,7 +54,9 @@ A lot of extra analysis can be done in the gold layer beyond simple views as sho
 
 ## Conclusion
 This image shows a high level architecture of the project.
+
 <img width="768" alt="image" src="https://github.com/user-attachments/assets/642588c4-3edc-47b3-837d-28241a2d43d8">
+
 Through this project I learnt how to:
 - Create an external stage that links Azure Data Lake Storage to Snowflake
 - Create automated tasks on Snowflake that can be scheduled to run at a certain time
